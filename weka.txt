@@ -1,0 +1,77 @@
+Aim: Generate forecasting model and interpret the result for a given data
+set.
+1.Create excel file iris.csv
+2.Open Weka >click Explorer >click open file> select file iris.csv file.
+3.click cluster tab click choose >select simpleMeans.
+4.click on start you can see the simple kmeans on the clustered output.
+
+
+Aim: Pre-process the given dataset and hence apply partition clusting algorithms. Interpret the result.
+1. open weka>click Explorer>click open file>select file iris.arff file.
+2.in preprocess window click on choose> weka >filter>unsupervised>attribute>partitionedmultifilter and click on apply.
+3.click on visualize all to display all partitioning.(click on pre-process)
+
+
+Aim: Pre-process the given data set and hence apply hierarchical algorithms and
+density based clustering techniques. Interpret the result.
+Steps:
+1. Create excel file iris.csv
+2. Open Weka>click Explorer>click open file>select file iris.csv file.
+3.click on cluster tab,click on choose>select HierarchicalClusterer.
+4. Click on Start.You can see the Hierarchical clustering on the Clustered output.
+5. In Result list ,right click on result > select visualize tree.
+6. Now click on cluster name ,a window will appear select linktype as complete and click on ok. again on start.
+
+Aim: Pre-process the given dataset and hence classify the resultant data 
+set using tree classification technique. Interpret the result 
+Steps: 
+1. Open Weka >click Explorer > click open file > select file iris.arff
+file. 
+2. Click on Classify tab, click on choose >select J48.
+3. Click on Start.
+4. Right click on result list>select visualize tree.
+
+
+Aim: Pre-process the given dataset and hence classify the resultant data 
+set using statistical based classifiers. Interpret the result 
+Steps: 
+1. Open Weka >click Explorer > click open file > select file iris.arff.
+2. Click on choose > filter > unsupervised > instance > RemovePercentage and on apply.
+3. Click on Classify tab, click on choose > bayes > select NaiveBayes.
+4. Click on Start.
+
+
+Aim : Pre-process the given dataset and hence classify the resultant dataset using support vector 
+machine. Interpret the result 
+1. Open Weka >click Explorer > click open file > select file iris.arff file.
+2. In classify window,click on choose > weka > functions > SMO 
+3. click on start.
+4.Right click on result list>select visualize: costcurve,setosa.
+
+
+AIM :Write a program to explain different function of Principal components
+head(iris)
+d<-iris[,1:4]
+d<-iris[,-5]
+head(d)
+pc <- princomp(d,cor=TRUE,score=TRUE)
+summary(pc)
+plot (pc)
+install.packages("FactoMineR")
+library(FactoMineR)
+install.packages("ade4")
+library(ade4)
+install.packages("amap")
+library(amap)
+ pc=acp(USArrests)
+pc$eig
+ pc$loadings
+ head(pc$scores)
+pc=PCA(USArrests,graph=FALSE)
+pc$eig
+ pc$var$coord
+ pc=dudi.pca(USArrests,scale.=TRUE)
+pc=prcomp(USArrests,scale.=TRUE)
+pc$sdev
+head(pc$rotation)
+head(pc$x)
